@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        span {
+            color: white;
+        }
+        table {
+            border: 2px solid white;
+        }
+        td, th {
+            color: white;
+            border: 1px solid white
+        }
+
+    </style>
+</head>
+
+<body>
+    <div><button onclick="appendDom()">Append to dom</button><span id="appendDom"></span></div>
+    <div><button onclick="appendNode()">Append to node</button><span id="appendNode"></span></div>
+    <div><button onclick="appendFrag()">Append to frag</button><span id="appendFrag"></span></div>
+    </br>
+    </br>
+    </br>
+    <div><button onclick="testAll()">testAll</button><span id="appendFrag"></span></div>
+
+    <thead>the head</thead>
+    <table>
+        <tr>
+            <th colspan="3">Average time per action</th>
+        </tr>
+        <tr>
+            <td>Dom</td><td>Node</td><td>Frag</td>
+        <tr>
+            <td id="domAvg"></td> <td id="nodeAvg"></td> <td id="fragAvg"></td>
+        </tr>
+        
+    </table>
+
+    <div id="area"></div>
+
+    
+
+
+   <script src="./blank.js"></script>
+</body>
+
+</html>
