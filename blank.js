@@ -31,11 +31,11 @@ function appendDom(params) {
 
     return new Promise(resolve => {
         let area = document.getElementById("area");
-        var begin = performance.now();
-        for (var x = 0; x < 200000; x++) {
+        let begin = performance.now();
+        for (let x = 0; x < 200000; x++) {
             area.appendChild(document.createElement("div"));
         }
-        var end = performance.now();
+        let end = performance.now();
         document.getElementById("appendDom").innerText = end - begin;
         console.log("DOM ET: ", end - begin);
         clearArea();
@@ -50,11 +50,11 @@ function appendNode(params) {
     return new Promise(resolve => {
         let area = document.getElementById("area");
         let data = document.createElement('div');
-        var begin = performance.now();
-        for (var x = 0; x < 200000; x++) {
+        let begin = performance.now();
+        for (let x = 0; x < 200000; x++) {
             data.appendChild(document.createElement("div"));
         }
-        var end = performance.now();
+        let end = performance.now();
         area.appendChild(data);
         document.getElementById("appendNode").innerText = end - begin;
         console.log("Node ET: ", end - begin);
@@ -68,11 +68,11 @@ function appendFrag(params) {
     return new Promise(resolve => {
         let area = document.getElementById("area");
         let data = document.createDocumentFragment();
-        var begin = performance.now();
-        for (var x = 0; x < 200000; x++) {
+        let begin = performance.now();
+        for (let x = 0; x < 200000; x++) {
             data.appendChild(document.createElement("div"));
         }
-        var end = performance.now();
+        let end = performance.now();
         area.appendChild(data);
         document.getElementById("appendFrag").innerText = end - begin
         console.log("Frag ET: ", end - begin);
