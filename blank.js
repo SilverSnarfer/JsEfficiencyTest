@@ -1,11 +1,13 @@
 function testAll() {
-    let times = 100
+    let times = 10
     let domSum = 0;
     let nodeSum = 0;
     let fragSum = 0;
 
     for (let index = 0; index < times; index++) {
-
+        let domAvg = document.getElementById("domAvg");
+        let nodeAvg = document.getElementById("nodeAvg");
+        let fragAvg = document.getElementById("fragAvg");
 
         appendDom()
             .then(res => {domSum += res;})
@@ -16,9 +18,9 @@ function testAll() {
                         appendFrag()
                         .then(res => {fragSum += res})
                         .then(() => {
-                            document.getElementById("domAvg").innerText = domSum / times
-                            document.getElementById("nodeAvg").innerText = nodeSum / times
-                            document.getElementById("fragAvg").innerText = fragSum / times
+                            domAvg.innerText = domSum / times
+                            nodeAvg.innerText = nodeSum / times
+                            fragAvg.innerText = fragSum / times
                         })
                     })
             })
