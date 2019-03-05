@@ -27,7 +27,7 @@ function testAll() {
 
 }
 
-function appendDom(params) {
+function appendDom() {
 
     return new Promise(resolve => {
         let area = document.getElementById("area");
@@ -45,7 +45,7 @@ function appendDom(params) {
 }
 
 
-function appendNode(params) {
+function appendNode() {
 
     return new Promise(resolve => {
         let area = document.getElementById("area");
@@ -63,7 +63,7 @@ function appendNode(params) {
     })
 
 }
-function appendFrag(params) {
+function appendFrag() {
 
     return new Promise(resolve => {
         let area = document.getElementById("area");
@@ -81,7 +81,7 @@ function appendFrag(params) {
     })
 }
 
-function clearArea(params) {
+function clearArea() {
     let area = document.getElementById("area");
     while (area.lastChild) {
         area.removeChild(area.lastChild);
